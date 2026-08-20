@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>OAuth Callback</title></head>
+<body>
+<h1>인증 완료</h1>
+<p>아래 code 값을 복사해서 알려주세요:</p>
+<pre id="code" style="font-size:20px;background:#eee;padding:12px;word-break:break-all;"></pre>
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById('code').textContent = params.get('code') || '(no code param — ' + window.location.search + ')';
+</script>
+</body></html>
